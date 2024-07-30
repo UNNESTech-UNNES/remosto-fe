@@ -73,6 +73,12 @@ export default function VoiceRecognition() {
         } else if (lowerText.includes("nearest facilities") || lowerText.includes("nearest public facilities") || lowerText.includes("fasilitas terdekat") || lowerText.includes("fasilitas publik terdekat") || lowerText.includes("hewan") || lowerText.includes("tentang hewan")) {
             window.location.href = '/public-facilities/nearest'; // Navigasi ke /public-facilities
             utterThis.text = "Berikut beberapa fasilitas umum terdekat di sekitar Anda";
+        } else if (lowerText.includes("jam") || lowerText.includes("pukul") || lowerText.includes("waktu")) {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const currentTime = `Saat ini jam ${hours} lebih ${minutes} menit.`;
+            utterThis.text = currentTime;
         } else {
             console.log("Kata kunci tidak dikenali");
             alert("Kata kunci tidak dikenali");
