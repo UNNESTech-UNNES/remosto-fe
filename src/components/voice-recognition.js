@@ -43,7 +43,7 @@ export default function VoiceRecognition() {
     function handleCommand(text) {
         const lowerText = text.toLowerCase();
         // Handle commands here...
-        if (lowerText.includes("home") || lowerText.includes("menu utama")) {
+        if (lowerText.includes("home") || lowerText.includes("menu utama") || lowerText.includes("halaman utama")) {
             window.location.href = '/'; // Navigasi ke halaman utama
         } else if (lowerText.includes("animals") || lowerText.includes("about animals") || lowerText.includes("satwa") || lowerText.includes("tentang satwa") || lowerText.includes("hewan") || lowerText.includes("tentang hewan")) {
             window.location.href = '/animals'; // Navigasi ke /animals
@@ -51,24 +51,12 @@ export default function VoiceRecognition() {
             window.location.href = '/public-facilities'; // Navigasi ke /public-facilities
         } else if (lowerText.includes("peta") || lowerText.includes("map")) {
             window.location.href = '/maps'; // Navigasi ke /map
-        } else if (lowerText.includes("food") || lowerText.includes("food store") || lowerText.includes("makan") || lowerText.includes("tempat makan") || lowerText.includes("hewan") || lowerText.includes("tentang hewan")) {
+        } else if (lowerText.includes("food") || lowerText.includes("food store") || lowerText.includes("makan") || lowerText.includes("tempat makan") || lowerText.includes("eat") || lowerText.includes("eating")) {
             window.location.href = '/food-store'; // Navigasi ke /food-store
         } else if (lowerText.includes("nearest animal") || lowerText.includes("hewan terdekat") || lowerText.includes("satwa terdekat")) {
             window.location.href = '/animals/nearest'; // Navigasi ke /animals-nearest
         } else if (lowerText.includes("nearest facilities") || lowerText.includes("nearest public facilities") || lowerText.includes("fasilitas terdekat") || lowerText.includes("fasilitas publik terdekat") || lowerText.includes("hewan") || lowerText.includes("tentang hewan")) {
             window.location.href = '/public-facilities/nearest'; // Navigasi ke /public-facilities
-        } else if (lowerText.includes("burung")) {
-            window.location.href = '/animals/category/zona-burung'; // Navigasi ke /animals/category/zona-burung
-        } else if (lowerText.includes("cakar")) {
-            window.location.href = '/animals/category/zona-cakar'; // Navigasi ke /animals/category/zona-cakar
-        } else if (lowerText.includes("mamalia")) {
-            window.location.href = '/animals/category/zona-mamalia'; // Navigasi ke /animals/category/zona-mamalia
-        } else if (lowerText.includes("petting")) {
-            window.location.href = '/animals/category/zona-petting-zoo'; // Navigasi ke /animals/category/zona-petting-zoo
-        } else if (lowerText.includes("/animals/category/zona-primata")) {
-            window.location.href = '/animals/categories'; // Navigasi ke /animals/category/zona-primata
-        } else if (lowerText.includes("reptil")) {
-            window.location.href = '/animals/category/zona-reptil'; // Navigasi ke /animals/category/zona-reptil
         } else {
             console.log("Kata kunci tidak dikenali");
             alert("Kata kunci tidak dikenali");
